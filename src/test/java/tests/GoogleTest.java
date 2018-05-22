@@ -1,6 +1,9 @@
 package tests;
 
 import org.testng.annotations.AfterClass;
+
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -13,9 +16,11 @@ public class GoogleTest {
 	WebDriver driver;
 	@BeforeClass
 	public void setup(){
+		
 		driver = GenericUtil.setWebdriver();
 		google = new GooglePage();
 		google.launchGoogle();
+		
 	}
 	@Test(priority=1)
 	public void runTest(){
@@ -31,6 +36,14 @@ public class GoogleTest {
 	@Test(priority=2)
 	public void testTwo(){
 		google.printResult();
+		//assertEquals(false, true);
+	}
+	
+	@Test
+	public void failedCase(){
+		System.out.println("Runnnniiinnngggg..........");
+		assertEquals(true, false);
+		
 	}
 	
 	@AfterClass

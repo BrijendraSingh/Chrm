@@ -6,8 +6,7 @@
 <classes>
 <class name="tests.GoogleTest">
 <methods>
-<include name="testTwo"/>
-<include name="runTest"></include>
+<include name="failedCase"/>
 </methods>
 
 </class>
