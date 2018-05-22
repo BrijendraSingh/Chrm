@@ -1,7 +1,13 @@
 <suite name="Default suite">
 <test verbose="2" name="Default test">
 <classes>
-<class name="tests.GoogleTest"/>
+<class name="tests.GoogleTest">
+<methods>
+<include name="testTwo"/>
+<include name="runTest"></include>
+</methods>
+
+</class>
 </classes>
 </test>
 <!--  Default test  -->
